@@ -1,16 +1,22 @@
 package FastADC;
 
+import java.io.BufferedWriter;
+import java.io.FileWriter;
+import java.io.IOException;
+import java.text.SimpleDateFormat;
+import java.util.List;
+
+import FastADC.aei.ApproxEvidenceInverter;
 import FastADC.evidence.EvidenceSetBuilder;
 import FastADC.evidence.evidenceSet.EvidenceSet;
-import FastADC.aei.ApproxEvidenceInverter;
+import FastADC.plishard.Cluster;
+import FastADC.plishard.Pli;
+import FastADC.plishard.PliShard;
+import FastADC.plishard.PliShardBuilder;
 import FastADC.predicate.PredicateBuilder;
 import de.metanome.algorithms.dcfinder.denialconstraints.DenialConstraintSet;
 import de.metanome.algorithms.dcfinder.input.Input;
 import de.metanome.algorithms.dcfinder.input.RelationalInput;
-import FastADC.plishard.PliShard;
-import FastADC.plishard.PliShardBuilder;
-
-import java.text.SimpleDateFormat;
 
 public class FastADC {
 
@@ -35,6 +41,43 @@ public class FastADC {
     private PliShardBuilder pliShardBuilder;
     private EvidenceSetBuilder evidenceSetBuilder;
 
+     public static void printPliShardsToFile(PliShard[] pliShards, String fp) {
+        // Replace the .csv extension with .plishards
+        String outputPath = fp.replaceAll("\\.csv$", ".plishards");
+
+        try (BufferedWriter writer = new BufferedWriter(new FileWriter(outputPath))) {
+            for (int shardIndex = 0; shardIndex < pliShards.length; shardIndex++) {
+                PliShard shard = pliShards[shardIndex];
+                writer.write(String.format("PliShard #%d (Range: [%d, %d))\n", shardIndex + 1, shard.beg, shard.end));
+                
+                List<Pli> plis = shard.plis;
+                for (int pliIndex = 0; pliIndex < plis.size(); pliIndex++) {
+                    Pli pli = plis.get(pliIndex);
+                    writer.write(String.format("\tPLI #%d\n", pliIndex + 1));
+                    writer.write("\tKeys: " + arrayToString(pli.getKeys()) + "\n");
+                    writer.write("\tClusters:\n");
+                    
+                    for (Cluster cluster : pli.getClusters()) {
+                        writer.write("\t\t" + cluster + "\n");
+                    }
+                }
+                writer.write("\n");
+            }
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+    }
+
+    private static String arrayToString(int[] array) {
+        StringBuilder sb = new StringBuilder("[");
+        for (int i = 0; i < array.length; i++) {
+            if (i > 0) sb.append(", ");
+            sb.append(array[i]);
+        }
+        sb.append("]");
+        return sb.toString();
+    }
+
     public FastADC(boolean _noCrossColumn, double _threshold, int _len, boolean _linear) {
         noCrossColumn = _noCrossColumn;
         threshold = _threshold;
@@ -54,6 +97,9 @@ public class FastADC {
         predicateBuilder.buildPredicateSpace(input);
         pliShardBuilder = new PliShardBuilder(shardLength, input.getParsedColumns());
         PliShard[] pliShards = pliShardBuilder.buildPliShards(input.getIntInput());
+
+        printPliShardsToFile(pliShards, _dataFp);
+
         long t_pre = System.currentTimeMillis() - t00;
         System.out.println(" [Predicate] Predicate space size: " + predicateBuilder.predicateCount());
         System.out.println("[FastADC] Pre-process time: " + t_pre + "ms");
