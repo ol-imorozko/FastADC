@@ -15,6 +15,8 @@ import de.metanome.algorithms.dcfinder.predicates.PredicateProvider;
 import de.metanome.algorithms.dcfinder.predicates.operands.ColumnOperand;
 import de.metanome.algorithms.dcfinder.predicates.sets.Closure;
 import de.metanome.algorithms.dcfinder.predicates.sets.PredicateSet;
+import java.io.FileWriter;
+import java.io.IOException;
 
 public class PredicateBuilder {
 
@@ -45,20 +47,61 @@ public class PredicateBuilder {
         predicateIdProvider = new IndexProvider<>();
     }
 
+    public static void printpredicates(List<Predicate> predicates) {
+        String outputPath = "predicates.out";
+
+        try (FileWriter writer = new FileWriter(outputPath)) {
+            for (Predicate p : predicates) {
+                writer.write(p.toString() + "\n");
+            }
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+    }
+
+    public static void PrintGroup(FileWriter writer, List<List<Predicate>> group, String group_name) throws IOException {
+        writer.write(group_name + ":\n");
+
+        for (List<Predicate> plist : group) {
+            for (Predicate p : plist) {
+                writer.write(p.toString() + "\n");
+            }
+        }
+
+        writer.write("\n");
+    }
+
+    public void PrintPredicateGroups() {
+        String outputPath = "predicate_groups.out";
+
+        try (FileWriter writer = new FileWriter(outputPath)) {
+            PrintGroup(writer, numSingleColumnPredicateGroups, "SingleColumnPredicateGroup");
+            PrintGroup(writer, numCrossColumnPredicateGroups, "CrossColumnPredicateGroup");
+            PrintGroup(writer, strSingleColumnPredicateGroups, "SingleColumnPredicateGroup");
+            PrintGroup(writer, strCrossColumnPredicateGroups, "CrossColumnPredicateGroup");
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+    }
+
     public void buildPredicateSpace(Input input) {
         List<ColumnPair> columnPairs = constructColumnPairs(input);
 
         for (ColumnPair pair : columnPairs) {
             ColumnOperand<?> o1 = new ColumnOperand<>(pair.getC1(), 0);
-            addPredicates(o1, new ColumnOperand<>(pair.getC2(), 1), pair.isJoinable(), pair.isComparable());
+            addPredicates(o1, new ColumnOperand<>(pair.getC2(), 1), pair.isComparable());
         }
         predicateIdProvider.addAll(predicates);
+
+        printpredicates(predicates);
 
         Predicate.configure(predicateProvider);
         Closure.configure(predicateProvider);
         PredicateSet.configure(predicateIdProvider);
 
         buildPredicateGroups();
+        PrintPredicateGroups();
+
         buildMutexMap();
         buildInverseMap();
     }
@@ -81,32 +124,12 @@ public class PredicateBuilder {
             inverseMap[r.getValue()] = predicateIdProvider.getIndex(r.getKey().getInverse());
     }
 
-    public List<Predicate> getPredicates() {
-        return predicates;
-    }
-
     public int predicateCount() {
         return predicates.size();
     }
 
-    public List<List<Predicate>> getPredicateGroups() {
-        return predicateGroups;
-    }
-
-    public IndexProvider<Predicate> getPredicateIdProvider() {
-        return predicateIdProvider;
-    }
-
     public LongBitSet[] getMutexMap() {
         return mutexMap;
-    }
-
-    public PredicateSet getInverse(PredicateSet predicateSet) {
-        LongBitSet bitset = predicateSet.getLongBitSet();
-        LongBitSet inverse = new LongBitSet();
-        for (int l = bitset.nextSetBit(0); l >= 0; l = bitset.nextSetBit(l + 1))
-            inverse.set(inverseMap[l]);
-        return new PredicateSet(inverse);
     }
 
     public PredicateSet getInverse(LongBitSet predicateSet) {
@@ -152,7 +175,10 @@ public class PredicateBuilder {
                 boolean joinable = isJoinable(c1, c2);
                 boolean comparable = isComparable(c1, c2);
                 if (joinable || comparable) {
+                //System.out.println("Current column pair {" + c1.toString() + ", " + c2.toString() + "} is " + (!joinable ? "not " : "") + "joinable and " + (!comparable ? "not " : "") + "comparable");
                     pairs.add(new ColumnPair(c1, c2, true, comparable));
+                } else {
+                //System.out.println("Skipping column pair {" + c1.toString() + ", " + c2.toString() + "}");
                 }
             }
         }
@@ -193,18 +219,18 @@ public class PredicateBuilder {
         return false;
     }
 
-    private void addPredicates(ColumnOperand<?> o1, ColumnOperand<?> o2, boolean joinable, boolean comparable) {
+    private void addPredicates(ColumnOperand<?> o1, ColumnOperand<?> o2, boolean comparable) {
         List<Predicate> partialPredicates = new ArrayList<>();
         for (Operator op : Operator.values()) {
             if (op == Operator.EQUAL || op == Operator.UNEQUAL) {
-                if (joinable && (o1.getIndex() != o2.getIndex()))
-                    partialPredicates.add(predicateProvider.getPredicate(op, o1, o2));
+                partialPredicates.add(predicateProvider.getPredicate(op, o1, o2));
             } else if (comparable) {
                 partialPredicates.add(predicateProvider.getPredicate(op, o1, o2));
             }
         }
 
         predicates.addAll(partialPredicates);
+        // not needed, do not use.
         predicateGroups.add(new ArrayList<>(partialPredicates));
     }
 
@@ -214,7 +240,7 @@ public class PredicateBuilder {
         strSingleColumnPredicateGroups = new ArrayList<>();
         strCrossColumnPredicateGroups = new ArrayList<>();
 
-        for (List<Predicate> predicateGroup : getPredicateGroups()) {
+        for (List<Predicate> predicateGroup : predicateGroups) {
             // numeric: comparable, all 6 predicates
             if (predicateGroup.size() == 6) {
                 if (predicateGroup.iterator().next().isCrossColumn())

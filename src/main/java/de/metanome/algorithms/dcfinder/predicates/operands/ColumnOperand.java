@@ -12,16 +12,8 @@ public class ColumnOperand<T extends Comparable<T>> {
         this.index = index;
     }
 
-    public T getValue(int line1, int line2) {
-        return column.getValue(index == 0 ? line1 : line2);
-    }
-
     public ParsedColumn<T> getColumn() {
         return column;
-    }
-
-    public int getIndex() {
-        return index;
     }
 
     public ColumnOperand<T> getInvT1T2() {

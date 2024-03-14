@@ -3,7 +3,6 @@ package de.metanome.algorithms.dcfinder.predicates;
 import java.util.HashMap;
 import java.util.Map;
 
-import de.metanome.algorithms.dcfinder.predicates.Operator;
 import de.metanome.algorithms.dcfinder.predicates.operands.ColumnOperand;
 
 

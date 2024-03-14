@@ -1,14 +1,8 @@
 package de.metanome.algorithms.dcfinder.denialconstraints;
 
-import ch.javasoft.bitset.IBitSet;
 import ch.javasoft.bitset.LongBitSet;
-import ch.javasoft.bitset.search.NTreeSearch;
-import de.metanome.algorithms.dcfinder.predicates.Operator;
 import de.metanome.algorithms.dcfinder.predicates.Predicate;
-import de.metanome.algorithms.dcfinder.predicates.sets.Closure;
 import de.metanome.algorithms.dcfinder.predicates.sets.PredicateSet;
-import de.metanome.algorithms.dcfinder.predicates.sets.PredicateSetFactory;
-
 
 public class DenialConstraint {
 
@@ -47,19 +41,19 @@ public class DenialConstraint {
     }
 
 
-    @Override
-    public int hashCode() {
-        int result1 = 0;
-        for (Predicate p : predicateSet)
-            result1 += Math.max(p.hashCode(), p.getSymmetric().hashCode());
+    // @Override
+    // public int hashCode() {
+    //     int result1 = 0;
+    //     for (Predicate p : predicateSet)
+    //         result1 += Math.max(p.hashCode(), p.getSymmetric().hashCode());
 
-        int result2 = 0;
-        if (getInvT1T2DC() != null)
-            for (Predicate p : getInvT1T2DC().predicateSet)
-                result2 += Math.max(p.hashCode(), p.getSymmetric().hashCode());
+    //     int result2 = 0;
+    //     if (getInvT1T2DC() != null)
+    //         for (Predicate p : getInvT1T2DC().predicateSet)
+    //             result2 += Math.max(p.hashCode(), p.getSymmetric().hashCode());
 
-        return Math.max(result1, result2);
-    }
+    //     return Math.max(result1, result2);
+    // }
 
     @Override
     public boolean equals(Object obj) {

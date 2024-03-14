@@ -1,10 +1,6 @@
 package de.metanome.algorithms.dcfinder.helpers;
 
 import java.util.*;
-import java.util.stream.Stream;
-
-import ch.javasoft.bitset.IBitSet;
-import ch.javasoft.bitset.LongBitSet;
 
 public class IndexProvider<T> {
 
@@ -34,23 +30,8 @@ public class IndexProvider<T> {
             getIndex(object);
     }
 
-    public void clear() {
-        nextIndex = 0;
-        objects.clear();
-        indexes.clear();
-        updateMap = null;
-    }
-
     public T getObject(int index) {
         return objects.get(index);
-    }
-
-    public List<T> getObjects() {
-        return objects;
-    }
-
-    public int[] getUpdateMap() {
-        return updateMap;
     }
 
     public static <A extends Comparable<A>> int[] sort(IndexProvider<A> r) {

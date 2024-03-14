@@ -6,7 +6,6 @@ import java.util.Collections;
 import java.util.List;
 
 
-import de.metanome.algorithms.dcfinder.predicates.Operator;
 import de.metanome.algorithms.dcfinder.predicates.operands.ColumnOperand;
 
 
@@ -19,8 +18,8 @@ public class Predicate {
 
 
     private final Operator op;
-    private final ColumnOperand operand1;
-    private final ColumnOperand operand2;
+    private final ColumnOperand<?> operand1;
+    private final ColumnOperand<?> operand2;
 
     public Predicate(Operator op, ColumnOperand<?> operand1, ColumnOperand<?> operand2) {
         if (op == null)
@@ -43,15 +42,6 @@ public class Predicate {
         if (symmetric != null) return symmetric;
         return symmetric = predicateProvider.getPredicate(op.getSymmetric(), operand2, operand1);
     }
-
-    private Predicate operatorSymmetric;
-
-    public Predicate getOperatorSymmetric() {
-        if (operatorSymmetric == null)
-            operatorSymmetric = predicateProvider.getPredicate(op.getSymmetric(), operand1, operand2);
-        return operatorSymmetric;
-    }
-
 
     private Predicate InvT1T2;
 
@@ -81,14 +71,6 @@ public class Predicate {
         return implications;
     }
 
-    public boolean implies(Predicate add) {
-        if (add.operand1.equals(this.operand1) && add.operand2.equals(this.operand2))
-            for (Operator i : op.getImplications())
-                if (add.op == i)
-                    return true;
-        return false;
-    }
-
     public Operator getOperator() {
         return op;
     }
@@ -99,10 +81,6 @@ public class Predicate {
 
     public ColumnOperand<?> getOperand2() {
         return operand2;
-    }
-
-    public boolean satisfies(int line1, int line2) {
-        return op.eval(operand1.getValue(line1, line2), operand2.getValue(line1, line2));
     }
 
     @Override

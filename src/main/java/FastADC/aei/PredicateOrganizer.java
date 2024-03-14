@@ -4,7 +4,6 @@ import FastADC.evidence.evidenceSet.Evidence;
 import FastADC.evidence.evidenceSet.EvidenceSet;
 import ch.javasoft.bitset.LongBitSet;
 
-import java.util.Arrays;
 import java.util.Comparator;
 import java.util.stream.IntStream;
 

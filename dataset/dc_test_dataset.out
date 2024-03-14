@@ -1,0 +1,345 @@
+¬{ t0.A int >= t1.A int ∧ t0.A int <= t1.C int ∧ t0.A int >= t1.D int ∧ t0.D int < t1.D int }
+¬{ t0.A int >= t1.C int ∧ t0.C int <= t1.C int ∧ t0.G string <> t1.G string }
+¬{ t0.A int <= t1.D int ∧ t0.F string == t1.F string ∧ t0.G string == t1.G string }
+¬{ t0.A int >= t1.D int ∧ t0.B double >= t1.B double ∧ t0.E double >= t1.E double }
+¬{ t0.A int <= t1.A int ∧ t0.A int >= t1.D int ∧ t0.B double <= t1.B double ∧ t0.D int <= t1.D int ∧ t0.G string <> t1.G string }
+¬{ t0.A int < t1.C int ∧ t0.A int >= t1.D int ∧ t0.E double <= t1.E double ∧ t0.F string <> t1.F string }
+¬{ t0.B double <= t1.B double ∧ t0.C int >= t1.C int ∧ t0.D int <= t1.D int }
+¬{ t0.A int <> t1.C int ∧ t0.A int >= t1.D int ∧ t0.D int < t1.D int ∧ t0.G string <> t1.G string }
+¬{ t0.A int <= t1.A int ∧ t0.B double >= t1.B double ∧ t0.D int > t1.D int ∧ t0.G string <> t1.G string }
+¬{ t0.A int <= t1.C int ∧ t0.C int >= t1.C int ∧ t0.D int >= t1.D int ∧ t0.F string <> t1.F string }
+¬{ t0.A int >= t1.A int ∧ t0.A int >= t1.C int ∧ t0.B double >= t1.B double ∧ t0.D int <= t1.D int }
+¬{ t0.A int <> t1.A int ∧ t0.A int >= t1.D int ∧ t0.B double <= t1.B double ∧ t0.D int < t1.D int }
+¬{ t0.C int >= t1.C int ∧ t0.C int <= t1.D int }
+¬{ t0.A int >= t1.D int ∧ t0.B double >= t1.B double ∧ t0.F string == t1.F string ∧ t0.G string <> t1.G string }
+¬{ t0.A int <= t1.C int ∧ t0.A int >= t1.D int ∧ t0.E double >= t1.E double ∧ t0.F string == t1.F string }
+¬{ t0.A int >= t1.A int ∧ t0.A int < t1.D int ∧ t0.E double <= t1.E double }
+¬{ t0.B double <= t1.B double ∧ t0.C int <> t1.D int ∧ t0.D int < t1.D int ∧ t0.G string <> t1.G string }
+¬{ t0.A int >= t1.C int ∧ t0.B double >= t1.B double ∧ t0.D int <= t1.D int ∧ t0.F string == t1.F string }
+¬{ t0.A int <= t1.D int ∧ t0.B double <= t1.B double ∧ t0.C int <= t1.C int ∧ t0.C int <> t1.D int ∧ t0.G string <> t1.G string }
+¬{ t0.A int >= t1.A int ∧ t0.A int <= t1.C int ∧ t0.A int <> t1.D int ∧ t0.C int >= t1.C int }
+¬{ t0.A int >= t1.C int ∧ t0.C int <= t1.C int ∧ t0.E double <= t1.E double }
+¬{ t0.A int >= t1.D int ∧ t0.D int <= t1.D int ∧ t0.F string <> t1.F string ∧ t0.G string == t1.G string }
+¬{ t0.A int <= t1.C int ∧ t0.A int >= t1.D int ∧ t0.D int < t1.D int ∧ t0.E double >= t1.E double }
+¬{ t0.A int <= t1.A int ∧ t0.A int <> t1.C int ∧ t0.A int > t1.D int ∧ t0.D int <> t1.D int ∧ t0.G string <> t1.G string }
+¬{ t0.A int <> t1.A int ∧ t0.A int <= t1.C int ∧ t0.C int >= t1.C int ∧ t0.D int >= t1.D int }
+¬{ t0.A int <= t1.A int ∧ t0.B double <= t1.B double ∧ t0.C int >= t1.C int ∧ t0.F string <> t1.F string }
+¬{ t0.A int < t1.A int ∧ t0.D int > t1.D int }
+¬{ t0.A int <> t1.D int ∧ t0.C int >= t1.C int ∧ t0.F string == t1.F string ∧ t0.G string <> t1.G string }
+¬{ t0.A int <= t1.D int ∧ t0.B double >= t1.B double ∧ t0.E double <= t1.E double ∧ t0.F string == t1.F string }
+¬{ t0.A int <= t1.A int ∧ t0.B double <= t1.B double ∧ t0.E double <= t1.E double ∧ t0.G string == t1.G string }
+¬{ t0.A int >= t1.C int ∧ t0.C int <= t1.C int ∧ t0.D int >= t1.D int }
+¬{ t0.B double <= t1.B double ∧ t0.D int <= t1.D int ∧ t0.F string == t1.F string ∧ t0.G string <> t1.G string }
+¬{ t0.A int <= t1.A int ∧ t0.A int <= t1.C int ∧ t0.A int >= t1.D int ∧ t0.B double <= t1.B double ∧ t0.D int <= t1.D int }
+¬{ t0.A int >= t1.A int ∧ t0.A int <= t1.D int ∧ t0.B double <= t1.B double ∧ t0.D int <= t1.D int }
+¬{ t0.A int >= t1.A int ∧ t0.A int <= t1.C int ∧ t0.A int <> t1.D int ∧ t0.E double <= t1.E double }
+¬{ t0.A int > t1.C int ∧ t0.D int < t1.D int ∧ t0.E double <= t1.E double }
+¬{ t0.A int <> t1.D int ∧ t0.D int >= t1.D int ∧ t0.F string == t1.F string ∧ t0.G string <> t1.G string }
+¬{ t0.A int == t1.C int ∧ t0.D int >= t1.D int }
+¬{ t0.A int <= t1.C int ∧ t0.F string == t1.F string ∧ t0.G string == t1.G string }
+¬{ t0.C int <> t1.D int ∧ t0.D int < t1.D int ∧ t0.E double >= t1.E double ∧ t0.F string <> t1.F string ∧ t0.G string <> t1.G string }
+¬{ t0.A int >= t1.A int ∧ t0.A int == t1.C int }
+¬{ t0.A int <= t1.A int ∧ t0.A int <= t1.C int ∧ t0.A int <> t1.D int ∧ t0.D int >= t1.D int }
+¬{ t0.A int < t1.A int ∧ t0.A int >= t1.D int ∧ t0.E double >= t1.E double }
+¬{ t0.A int >= t1.A int ∧ t0.A int <= t1.C int ∧ t0.G string == t1.G string }
+¬{ t0.A int < t1.D int ∧ t0.E double <= t1.E double ∧ t0.F string == t1.F string }
+¬{ t0.A int <= t1.D int ∧ t0.C int >= t1.C int ∧ t0.D int <= t1.D int }
+¬{ t0.A int <= t1.A int ∧ t0.A int <> t1.D int ∧ t0.D int > t1.D int ∧ t0.G string <> t1.G string }
+¬{ t0.C int < t1.D int ∧ t0.G string <> t1.G string }
+¬{ t0.A int <= t1.A int ∧ t0.B double <= t1.B double ∧ t0.D int == t1.D int }
+¬{ t0.A int == t1.A int ∧ t0.B double <= t1.B double ∧ t0.E double >= t1.E double ∧ t0.G string <> t1.G string }
+¬{ t0.C int < t1.D int ∧ t0.E double <= t1.E double }
+¬{ t0.A int == t1.D int ∧ t0.G string == t1.G string }
+¬{ t0.B double <= t1.B double ∧ t0.C int <= t1.D int ∧ t0.E double <= t1.E double }
+¬{ t0.A int <= t1.A int ∧ t0.A int >= t1.D int ∧ t0.C int <= t1.C int ∧ t0.F string <> t1.F string }
+¬{ t0.A int == t1.A int ∧ t0.A int <= t1.C int ∧ t0.A int >= t1.D int ∧ t0.D int <= t1.D int }
+¬{ t0.C int <= t1.D int ∧ t0.D int >= t1.D int }
+¬{ t0.A int >= t1.D int ∧ t0.B double >= t1.B double ∧ t0.C int <= t1.C int }
+¬{ t0.A int < t1.A int ∧ t0.A int > t1.C int ∧ t0.D int <> t1.D int }
+¬{ t0.A int <= t1.A int ∧ t0.C int <> t1.D int ∧ t0.E double <= t1.E double ∧ t0.F string <> t1.F string ∧ t0.G string == t1.G string }
+¬{ t0.A int <= t1.A int ∧ t0.C int <= t1.C int ∧ t0.D int >= t1.D int }
+¬{ t0.A int <> t1.A int ∧ t0.A int <= t1.C int ∧ t0.B double <= t1.B double ∧ t0.E double <= t1.E double }
+¬{ t0.A int >= t1.A int ∧ t0.A int >= t1.C int ∧ t0.D int <= t1.D int ∧ t0.F string <> t1.F string }
+¬{ t0.A int >= t1.D int ∧ t0.D int <= t1.D int ∧ t0.F string == t1.F string ∧ t0.G string <> t1.G string }
+¬{ t0.A int >= t1.C int ∧ t0.B double <= t1.B double ∧ t0.C int >= t1.C int ∧ t0.F string == t1.F string }
+¬{ t0.A int <= t1.C int ∧ t0.B double >= t1.B double ∧ t0.D int >= t1.D int }
+¬{ t0.A int >= t1.A int ∧ t0.A int <= t1.D int ∧ t0.B double <= t1.B double ∧ t0.C int <= t1.C int }
+¬{ t0.A int == t1.D int ∧ t0.B double >= t1.B double }
+¬{ t0.A int <= t1.A int ∧ t0.A int > t1.D int ∧ t0.B double <= t1.B double ∧ t0.G string <> t1.G string }
+¬{ t0.A int < t1.C int ∧ t0.A int <> t1.D int ∧ t0.C int >= t1.C int }
+¬{ t0.A int < t1.A int ∧ t0.D int >= t1.D int ∧ t0.G string == t1.G string }
+¬{ t0.A int > t1.A int ∧ t0.A int <= t1.C int ∧ t0.C int >= t1.C int }
+¬{ t0.A int <= t1.A int ∧ t0.A int <> t1.C int ∧ t0.A int >= t1.D int ∧ t0.B double >= t1.B double ∧ t0.D int <> t1.D int ∧ t0.G string <> t1.G string }
+¬{ t0.A int < t1.C int ∧ t0.A int >= t1.D int ∧ t0.D int <= t1.D int ∧ t0.E double <= t1.E double }
+¬{ t0.A int <> t1.A int ∧ t0.A int < t1.C int ∧ t0.A int >= t1.D int ∧ t0.E double <= t1.E double }
+¬{ t0.A int >= t1.C int ∧ t0.C int <= t1.D int }
+¬{ t0.A int < t1.A int ∧ t0.A int <> t1.C int ∧ t0.C int >= t1.C int ∧ t0.D int <> t1.D int }
+¬{ t0.A int >= t1.D int ∧ t0.C int <= t1.C int ∧ t0.F string <> t1.F string ∧ t0.G string == t1.G string }
+¬{ t0.A int >= t1.D int ∧ t0.D int <= t1.D int ∧ t0.E double <= t1.E double ∧ t0.G string == t1.G string }
+¬{ t0.A int >= t1.A int ∧ t0.A int >= t1.D int ∧ t0.D int < t1.D int ∧ t0.G string <> t1.G string }
+¬{ t0.A int <= t1.D int ∧ t0.D int >= t1.D int ∧ t0.G string == t1.G string }
+¬{ t0.A int <> t1.A int ∧ t0.A int >= t1.D int ∧ t0.D int < t1.D int ∧ t0.E double >= t1.E double }
+¬{ t0.A int <= t1.C int ∧ t0.A int <> t1.D int ∧ t0.D int >= t1.D int ∧ t0.F string == t1.F string }
+¬{ t0.E double == t1.E double }
+¬{ t0.A int <> t1.D int ∧ t0.B double <= t1.B double ∧ t0.F string == t1.F string ∧ t0.G string <> t1.G string }
+¬{ t0.A int <= t1.D int ∧ t0.B double >= t1.B double ∧ t0.C int >= t1.C int }
+¬{ t0.A int >= t1.D int ∧ t0.E double >= t1.E double ∧ t0.F string == t1.F string ∧ t0.G string <> t1.G string }
+¬{ t0.A int <= t1.A int ∧ t0.A int >= t1.C int ∧ t0.D int > t1.D int ∧ t0.G string <> t1.G string }
+¬{ t0.A int <> t1.C int ∧ t0.A int >= t1.D int ∧ t0.D int < t1.D int ∧ t0.E double <= t1.E double }
+¬{ t0.A int <= t1.A int ∧ t0.B double <= t1.B double ∧ t0.D int >= t1.D int ∧ t0.F string <> t1.F string }
+¬{ t0.A int == t1.C int ∧ t0.E double >= t1.E double }
+¬{ t0.A int <= t1.D int ∧ t0.D int == t1.D int }
+¬{ t0.A int == t1.A int ∧ t0.B double <= t1.B double ∧ t0.C int <= t1.C int ∧ t0.G string <> t1.G string }
+¬{ t0.A int >= t1.C int ∧ t0.B double <= t1.B double ∧ t0.D int <= t1.D int ∧ t0.F string <> t1.F string }
+¬{ t0.A int >= t1.D int ∧ t0.D int < t1.D int ∧ t0.E double >= t1.E double ∧ t0.F string <> t1.F string }
+¬{ t0.A int <= t1.C int ∧ t0.A int > t1.D int ∧ t0.F string == t1.F string }
+¬{ t0.A int == t1.A int ∧ t0.A int <> t1.D int ∧ t0.C int >= t1.C int ∧ t0.G string <> t1.G string }
+¬{ t0.B double >= t1.B double ∧ t0.C int > t1.D int ∧ t0.D int <= t1.D int ∧ t0.G string == t1.G string }
+¬{ t0.A int <= t1.A int ∧ t0.A int >= t1.D int ∧ t0.E double >= t1.E double ∧ t0.G string <> t1.G string }
+¬{ t0.A int <= t1.A int ∧ t0.A int >= t1.C int ∧ t0.E double >= t1.E double ∧ t0.G string <> t1.G string }
+¬{ t0.A int >= t1.A int ∧ t0.A int <= t1.D int ∧ t0.B double <= t1.B double ∧ t0.E double >= t1.E double }
+¬{ t0.A int > t1.A int ∧ t0.A int <= t1.D int }
+¬{ t0.A int <= t1.C int ∧ t0.A int <> t1.D int ∧ t0.B double <= t1.B double ∧ t0.C int >= t1.C int }
+¬{ t0.A int >= t1.D int ∧ t0.B double <= t1.B double ∧ t0.D int < t1.D int ∧ t0.G string <> t1.G string }
+¬{ t0.B double >= t1.B double ∧ t0.C int <= t1.C int ∧ t0.C int > t1.D int ∧ t0.G string == t1.G string }
+¬{ t0.A int >= t1.A int ∧ t0.A int >= t1.C int ∧ t0.D int == t1.D int }
+¬{ t0.A int < t1.A int ∧ t0.A int >= t1.D int ∧ t0.C int <= t1.C int }
+¬{ t0.A int >= t1.D int ∧ t0.C int <= t1.C int ∧ t0.F string == t1.F string ∧ t0.G string <> t1.G string }
+¬{ t0.A int <= t1.D int ∧ t0.B double <= t1.B double ∧ t0.D int <= t1.D int ∧ t0.F string == t1.F string }
+¬{ t0.A int >= t1.C int ∧ t0.D int <= t1.D int ∧ t0.F string <> t1.F string ∧ t0.G string == t1.G string }
+¬{ t0.A int <= t1.A int ∧ t0.A int >= t1.C int ∧ t0.B double <= t1.B double ∧ t0.E double <= t1.E double }
+¬{ t0.A int <= t1.C int ∧ t0.C int >= t1.C int ∧ t0.G string == t1.G string }
+¬{ t0.D int == t1.D int ∧ t0.G string == t1.G string }
+¬{ t0.A int <= t1.A int ∧ t0.A int <> t1.C int ∧ t0.A int <> t1.D int ∧ t0.C int >= t1.C int ∧ t0.D int <> t1.D int ∧ t0.G string <> t1.G string }
+¬{ t0.A int <> t1.A int ∧ t0.A int <= t1.C int ∧ t0.B double <= t1.B double ∧ t0.C int >= t1.C int }
+¬{ t0.B double >= t1.B double ∧ t0.C int > t1.D int ∧ t0.E double >= t1.E double ∧ t0.F string <> t1.F string }
+¬{ t0.A int == t1.A int ∧ t0.A int <= t1.C int ∧ t0.A int <> t1.D int ∧ t0.B double <= t1.B double }
+¬{ t0.A int <= t1.A int ∧ t0.A int >= t1.D int ∧ t0.F string <> t1.F string ∧ t0.G string == t1.G string }
+¬{ t0.A int >= t1.A int ∧ t0.A int <= t1.D int ∧ t0.F string <> t1.F string }
+¬{ t0.A int >= t1.D int ∧ t0.B double >= t1.B double ∧ t0.D int <= t1.D int ∧ t0.G string == t1.G string }
+¬{ t0.A int == t1.A int ∧ t0.A int <= t1.C int ∧ t0.A int > t1.D int }
+¬{ t0.A int <= t1.D int ∧ t0.C int <> t1.D int ∧ t0.E double <= t1.E double ∧ t0.G string == t1.G string }
+¬{ t0.A int < t1.C int ∧ t0.B double >= t1.B double ∧ t0.C int >= t1.C int }
+¬{ t0.B double <= t1.B double ∧ t0.C int < t1.D int }
+¬{ t0.A int <= t1.A int ∧ t0.A int >= t1.C int ∧ t0.B double <= t1.B double ∧ t0.D int >= t1.D int }
+¬{ t0.A int <= t1.A int ∧ t0.A int <= t1.C int ∧ t0.D int == t1.D int }
+¬{ t0.A int >= t1.A int ∧ t0.A int < t1.D int ∧ t0.B double <= t1.B double }
+¬{ t0.A int <> t1.A int ∧ t0.A int <= t1.D int ∧ t0.D int >= t1.D int }
+¬{ t0.A int <= t1.A int ∧ t0.D int >= t1.D int ∧ t0.F string <> t1.F string ∧ t0.G string == t1.G string }
+¬{ t0.A int < t1.A int ∧ t0.A int < t1.C int ∧ t0.A int >= t1.D int }
+¬{ t0.A int <= t1.C int ∧ t0.A int >= t1.D int ∧ t0.C int <= t1.C int ∧ t0.F string == t1.F string }
+¬{ t0.A int <> t1.A int ∧ t0.A int < t1.C int ∧ t0.C int >= t1.C int }
+¬{ t0.A int <= t1.A int ∧ t0.A int >= t1.C int ∧ t0.B double <= t1.B double ∧ t0.C int >= t1.C int }
+¬{ t0.A int <> t1.A int ∧ t0.A int <= t1.D int ∧ t0.C int <> t1.D int ∧ t0.E double >= t1.E double ∧ t0.G string <> t1.G string }
+¬{ t0.A int <= t1.A int ∧ t0.A int <> t1.D int ∧ t0.B double <= t1.B double ∧ t0.E double <= t1.E double }
+¬{ t0.A int <= t1.C int ∧ t0.A int >= t1.D int ∧ t0.B double <= t1.B double ∧ t0.D int < t1.D int }
+¬{ t0.C int <= t1.D int ∧ t0.E double <= t1.E double ∧ t0.G string <> t1.G string }
+¬{ t0.D int <= t1.D int ∧ t0.E double <= t1.E double ∧ t0.F string == t1.F string }
+¬{ t0.A int <= t1.C int ∧ t0.C int <> t1.D int ∧ t0.E double <= t1.E double ∧ t0.G string == t1.G string }
+¬{ t0.A int < t1.A int ∧ t0.B double <= t1.B double ∧ t0.D int >= t1.D int }
+¬{ t0.A int >= t1.A int ∧ t0.C int <= t1.D int }
+¬{ t0.B double <= t1.B double ∧ t0.E double <= t1.E double ∧ t0.F string == t1.F string ∧ t0.G string == t1.G string }
+¬{ t0.A int <= t1.D int ∧ t0.B double <= t1.B double ∧ t0.E double <= t1.E double ∧ t0.F string <> t1.F string }
+¬{ t0.B double >= t1.B double ∧ t0.C int <> t1.D int ∧ t0.E double >= t1.E double ∧ t0.F string <> t1.F string ∧ t0.G string <> t1.G string }
+¬{ t0.A int <= t1.A int ∧ t0.B double <= t1.B double ∧ t0.C int <> t1.D int ∧ t0.E double >= t1.E double ∧ t0.G string <> t1.G string }
+¬{ t0.A int >= t1.A int ∧ t0.A int <= t1.C int ∧ t0.B double >= t1.B double ∧ t0.E double <= t1.E double }
+¬{ t0.A int >= t1.C int ∧ t0.D int == t1.D int ∧ t0.E double >= t1.E double }
+¬{ t0.A int >= t1.C int ∧ t0.B double <= t1.B double ∧ t0.D int <= t1.D int ∧ t0.G string <> t1.G string }
+¬{ t0.A int <= t1.A int ∧ t0.A int > t1.C int ∧ t0.D int <> t1.D int ∧ t0.G string <> t1.G string }
+¬{ t0.A int <= t1.C int ∧ t0.B double >= t1.B double ∧ t0.C int > t1.D int ∧ t0.G string == t1.G string }
+¬{ t0.A int == t1.C int ∧ t0.C int <= t1.C int }
+¬{ t0.A int <> t1.A int ∧ t0.A int > t1.C int ∧ t0.D int < t1.D int }
+¬{ t0.A int <= t1.A int ∧ t0.A int > t1.C int ∧ t0.D int <> t1.D int ∧ t0.F string <> t1.F string }
+¬{ t0.A int == t1.A int ∧ t0.A int <= t1.C int ∧ t0.B double <= t1.B double ∧ t0.E double >= t1.E double }
+¬{ t0.A int <> t1.D int ∧ t0.B double <= t1.B double ∧ t0.E double <= t1.E double ∧ t0.F string == t1.F string }
+¬{ t0.A int <> t1.A int ∧ t0.A int >= t1.C int ∧ t0.D int <= t1.D int ∧ t0.G string == t1.G string }
+¬{ t0.A int <= t1.A int ∧ t0.A int <= t1.C int ∧ t0.A int > t1.D int ∧ t0.B double <= t1.B double }
+¬{ t0.A int <= t1.A int ∧ t0.A int <= t1.C int ∧ t0.A int >= t1.D int ∧ t0.E double >= t1.E double }
+¬{ t0.A int == t1.A int ∧ t0.A int <= t1.C int ∧ t0.B double <= t1.B double ∧ t0.D int <= t1.D int }
+¬{ t0.A int <= t1.D int ∧ t0.B double >= t1.B double ∧ t0.C int > t1.D int ∧ t0.G string == t1.G string }
+¬{ t0.A int <= t1.D int ∧ t0.C int >= t1.C int ∧ t0.F string <> t1.F string }
+¬{ t0.A int == t1.C int ∧ t0.F string == t1.F string }
+¬{ t0.A int <= t1.A int ∧ t0.A int <> t1.C int ∧ t0.A int >= t1.D int ∧ t0.D int <> t1.D int ∧ t0.F string <> t1.F string }
+¬{ t0.A int == t1.A int ∧ t0.A int <> t1.D int ∧ t0.E double <= t1.E double ∧ t0.G string <> t1.G string }
+¬{ t0.A int <> t1.A int ∧ t0.A int >= t1.C int ∧ t0.D int <= t1.D int ∧ t0.E double >= t1.E double }
+¬{ t0.A int <= t1.A int ∧ t0.D int > t1.D int ∧ t0.F string <> t1.F string }
+¬{ t0.A int <= t1.D int ∧ t0.C int >= t1.C int ∧ t0.G string == t1.G string }
+¬{ t0.A int == t1.A int ∧ t0.A int >= t1.C int ∧ t0.G string <> t1.G string }
+¬{ t0.A int >= t1.D int ∧ t0.C int <= t1.C int ∧ t0.D int < t1.D int ∧ t0.F string <> t1.F string }
+¬{ t0.A int >= t1.C int ∧ t0.B double >= t1.B double ∧ t0.D int <= t1.D int ∧ t0.G string == t1.G string }
+¬{ t0.A int >= t1.A int ∧ t0.A int <= t1.C int ∧ t0.B double <= t1.B double ∧ t0.D int < t1.D int }
+¬{ t0.A int <> t1.A int ∧ t0.C int <> t1.D int ∧ t0.D int < t1.D int ∧ t0.E double >= t1.E double ∧ t0.G string <> t1.G string }
+¬{ t0.A int >= t1.C int ∧ t0.B double <= t1.B double ∧ t0.D int == t1.D int }
+¬{ t0.A int <= t1.D int ∧ t0.B double <= t1.B double ∧ t0.E double >= t1.E double ∧ t0.F string == t1.F string }
+¬{ t0.A int == t1.A int ∧ t0.A int <= t1.C int ∧ t0.B double <= t1.B double ∧ t0.C int <= t1.C int }
+¬{ t0.A int < t1.D int ∧ t0.B double <= t1.B double ∧ t0.C int <> t1.D int ∧ t0.G string <> t1.G string }
+¬{ t0.A int == t1.A int ∧ t0.A int <> t1.D int ∧ t0.D int >= t1.D int ∧ t0.G string <> t1.G string }
+¬{ t0.A int <= t1.D int ∧ t0.B double <= t1.B double ∧ t0.C int <> t1.D int ∧ t0.F string <> t1.F string ∧ t0.G string <> t1.G string }
+¬{ t0.A int < t1.A int ∧ t0.A int >= t1.C int ∧ t0.G string == t1.G string }
+¬{ t0.A int <> t1.D int ∧ t0.E double <= t1.E double ∧ t0.F string == t1.F string ∧ t0.G string <> t1.G string }
+¬{ t0.A int <= t1.A int ∧ t0.A int >= t1.C int ∧ t0.F string <> t1.F string ∧ t0.G string == t1.G string }
+¬{ t0.A int <> t1.A int ∧ t0.A int <= t1.C int ∧ t0.D int >= t1.D int ∧ t0.E double <= t1.E double }
+¬{ t0.A int <= t1.C int ∧ t0.C int >= t1.C int ∧ t0.D int == t1.D int }
+¬{ t0.A int <> t1.A int ∧ t0.A int >= t1.D int ∧ t0.C int <= t1.C int ∧ t0.D int < t1.D int }
+¬{ t0.A int <= t1.D int ∧ t0.B double <= t1.B double ∧ t0.C int <= t1.C int ∧ t0.F string == t1.F string }
+¬{ t0.A int <= t1.D int ∧ t0.D int >= t1.D int ∧ t0.F string <> t1.F string }
+¬{ t0.A int >= t1.C int ∧ t0.D int <= t1.D int ∧ t0.E double <= t1.E double ∧ t0.G string == t1.G string }
+¬{ t0.A int <= t1.D int ∧ t0.C int >= t1.C int ∧ t0.E double >= t1.E double }
+¬{ t0.A int > t1.C int ∧ t0.D int < t1.D int ∧ t0.F string <> t1.F string }
+¬{ t0.A int <> t1.D int ∧ t0.B double <= t1.B double ∧ t0.D int >= t1.D int ∧ t0.F string == t1.F string }
+¬{ t0.A int <> t1.A int ∧ t0.F string == t1.F string }
+¬{ t0.A int == t1.A int ∧ t0.B double <= t1.B double ∧ t0.D int <= t1.D int ∧ t0.G string <> t1.G string }
+¬{ t0.A int <= t1.D int ∧ t0.B double <= t1.B double ∧ t0.C int <> t1.D int ∧ t0.E double >= t1.E double ∧ t0.G string <> t1.G string }
+¬{ t0.A int <= t1.A int ∧ t0.A int <= t1.C int ∧ t0.D int >= t1.D int ∧ t0.F string <> t1.F string }
+¬{ t0.A int <= t1.D int ∧ t0.B double <= t1.B double ∧ t0.C int <> t1.D int ∧ t0.D int <= t1.D int ∧ t0.G string <> t1.G string }
+¬{ t0.A int <= t1.D int ∧ t0.D int >= t1.D int ∧ t0.E double >= t1.E double }
+¬{ t0.C int <= t1.D int ∧ t0.F string == t1.F string }
+¬{ t0.C int <= t1.C int ∧ t0.D int >= t1.D int ∧ t0.F string == t1.F string }
+¬{ t0.A int <= t1.A int ∧ t0.A int >= t1.C int ∧ t0.B double <= t1.B double ∧ t0.F string <> t1.F string }
+¬{ t0.A int <= t1.C int ∧ t0.A int >= t1.D int ∧ t0.G string == t1.G string }
+¬{ t0.A int > t1.C int ∧ t0.B double >= t1.B double ∧ t0.D int < t1.D int }
+¬{ t0.A int == t1.C int ∧ t0.G string == t1.G string }
+¬{ t0.A int == t1.A int ∧ t0.A int >= t1.D int ∧ t0.D int <= t1.D int ∧ t0.G string <> t1.G string }
+¬{ t0.A int <= t1.A int ∧ t0.B double <= t1.B double ∧ t0.E double <= t1.E double ∧ t0.F string <> t1.F string }
+¬{ t0.A int <> t1.A int ∧ t0.A int >= t1.D int ∧ t0.D int <= t1.D int ∧ t0.G string == t1.G string }
+¬{ t0.A int <= t1.C int ∧ t0.B double <= t1.B double ∧ t0.D int <= t1.D int ∧ t0.F string == t1.F string }
+¬{ t0.C int <= t1.C int ∧ t0.D int >= t1.D int ∧ t0.E double <= t1.E double }
+¬{ t0.A int <= t1.C int ∧ t0.C int >= t1.C int ∧ t0.E double >= t1.E double }
+¬{ t0.A int == t1.D int ∧ t0.F string <> t1.F string }
+¬{ t0.C int <= t1.C int ∧ t0.D int >= t1.D int ∧ t0.G string == t1.G string }
+¬{ t0.A int <= t1.C int ∧ t0.B double >= t1.B double ∧ t0.E double <= t1.E double ∧ t0.F string == t1.F string }
+¬{ t0.A int <= t1.A int ∧ t0.C int >= t1.C int ∧ t0.F string <> t1.F string ∧ t0.G string == t1.G string }
+¬{ t0.A int >= t1.D int ∧ t0.C int <= t1.D int }
+¬{ t0.A int >= t1.C int ∧ t0.A int <= t1.D int }
+¬{ t0.A int < t1.C int ∧ t0.A int > t1.D int ∧ t0.E double <= t1.E double }
+¬{ t0.A int < t1.A int ∧ t0.A int <> t1.C int ∧ t0.A int >= t1.D int ∧ t0.D int <> t1.D int }
+¬{ t0.A int <= t1.C int ∧ t0.A int <> t1.D int ∧ t0.C int >= t1.C int ∧ t0.D int >= t1.D int }
+¬{ t0.A int <= t1.A int ∧ t0.A int <> t1.C int ∧ t0.B double >= t1.B double ∧ t0.C int >= t1.C int ∧ t0.D int <> t1.D int ∧ t0.G string <> t1.G string }
+¬{ t0.A int <> t1.A int ∧ t0.A int <= t1.D int ∧ t0.B double <= t1.B double ∧ t0.E double <= t1.E double }
+¬{ t0.A int >= t1.A int ∧ t0.A int <= t1.D int ∧ t0.B double >= t1.B double ∧ t0.E double <= t1.E double }
+¬{ t0.A int <= t1.A int ∧ t0.A int >= t1.D int ∧ t0.B double <= t1.B double ∧ t0.F string <> t1.F string }
+¬{ t0.B double == t1.B double }
+¬{ t0.C int <= t1.C int ∧ t0.E double <= t1.E double ∧ t0.F string == t1.F string }
+¬{ t0.A int >= t1.D int ∧ t0.B double >= t1.B double ∧ t0.D int <= t1.D int ∧ t0.F string == t1.F string }
+¬{ t0.A int <> t1.A int ∧ t0.A int <> t1.C int ∧ t0.A int >= t1.D int ∧ t0.D int < t1.D int }
+¬{ t0.A int < t1.A int ∧ t0.B double <= t1.B double ∧ t0.E double <= t1.E double }
+¬{ t0.A int >= t1.D int ∧ t0.B double <= t1.B double ∧ t0.D int < t1.D int ∧ t0.F string <> t1.F string }
+¬{ t0.A int <= t1.A int ∧ t0.C int <> t1.D int ∧ t0.E double >= t1.E double ∧ t0.F string <> t1.F string ∧ t0.G string <> t1.G string }
+¬{ t0.A int == t1.A int ∧ t0.D int == t1.D int }
+¬{ t0.A int <> t1.A int ∧ t0.A int == t1.D int }
+¬{ t0.A int <= t1.A int ∧ t0.A int < t1.C int ∧ t0.A int >= t1.D int ∧ t0.F string <> t1.F string }
+¬{ t0.A int < t1.C int ∧ t0.C int >= t1.C int ∧ t0.F string <> t1.F string }
+¬{ t0.A int <= t1.A int ∧ t0.A int <> t1.D int ∧ t0.B double <= t1.B double ∧ t0.C int <> t1.D int ∧ t0.G string <> t1.G string }
+¬{ t0.A int > t1.C int ∧ t0.D int < t1.D int ∧ t0.G string <> t1.G string }
+¬{ t0.A int < t1.D int ∧ t0.B double <= t1.B double ∧ t0.F string == t1.F string }
+¬{ t0.A int == t1.A int ∧ t0.A int >= t1.D int ∧ t0.B double >= t1.B double ∧ t0.G string <> t1.G string }
+¬{ t0.A int < t1.C int ∧ t0.A int >= t1.D int ∧ t0.D int < t1.D int }
+¬{ t0.A int >= t1.C int ∧ t0.B double <= t1.B double ∧ t0.E double <= t1.E double ∧ t0.F string == t1.F string }
+¬{ t0.A int <= t1.C int ∧ t0.A int <> t1.D int ∧ t0.C int >= t1.C int ∧ t0.F string == t1.F string }
+¬{ t0.A int >= t1.A int ∧ t0.A int >= t1.C int ∧ t0.D int <= t1.D int ∧ t0.G string <> t1.G string }
+¬{ t0.B double <= t1.B double ∧ t0.D int >= t1.D int ∧ t0.F string == t1.F string ∧ t0.G string == t1.G string }
+¬{ t0.A int <= t1.A int ∧ t0.B double <= t1.B double ∧ t0.C int <> t1.D int ∧ t0.D int <= t1.D int ∧ t0.G string <> t1.G string }
+¬{ t0.B double <= t1.B double ∧ t0.C int <= t1.C int ∧ t0.E double <= t1.E double }
+¬{ t0.A int > t1.D int ∧ t0.F string == t1.F string ∧ t0.G string <> t1.G string }
+¬{ t0.A int >= t1.C int ∧ t0.D int <= t1.D int ∧ t0.E double >= t1.E double ∧ t0.F string <> t1.F string }
+¬{ t0.A int <= t1.C int ∧ t0.B double <= t1.B double ∧ t0.C int <= t1.C int ∧ t0.F string == t1.F string }
+¬{ t0.A int >= t1.A int ∧ t0.A int <= t1.C int ∧ t0.E double <= t1.E double ∧ t0.F string <> t1.F string }
+¬{ t0.A int <> t1.C int ∧ t0.C int >= t1.C int ∧ t0.D int < t1.D int }
+¬{ t0.A int <= t1.A int ∧ t0.B double <= t1.B double ∧ t0.C int <> t1.D int ∧ t0.F string <> t1.F string ∧ t0.G string <> t1.G string }
+¬{ t0.A int >= t1.D int ∧ t0.D int < t1.D int ∧ t0.E double >= t1.E double ∧ t0.G string <> t1.G string }
+¬{ t0.A int < t1.A int ∧ t0.C int <> t1.D int ∧ t0.E double <= t1.E double ∧ t0.G string == t1.G string }
+¬{ t0.A int <= t1.D int ∧ t0.C int <> t1.D int ∧ t0.E double >= t1.E double ∧ t0.F string <> t1.F string ∧ t0.G string <> t1.G string }
+¬{ t0.A int == t1.D int ∧ t0.E double >= t1.E double }
+¬{ t0.B double >= t1.B double ∧ t0.C int >= t1.D int ∧ t0.E double >= t1.E double ∧ t0.G string == t1.G string }
+¬{ t0.A int < t1.A int ∧ t0.B double <= t1.B double ∧ t0.C int <> t1.D int ∧ t0.G string <> t1.G string }
+¬{ t0.A int >= t1.C int ∧ t0.B double >= t1.B double ∧ t0.C int <= t1.C int }
+¬{ t0.A int <> t1.A int ∧ t0.A int >= t1.C int ∧ t0.C int <= t1.C int }
+¬{ t0.A int <= t1.D int ∧ t0.B double >= t1.B double ∧ t0.D int >= t1.D int }
+¬{ t0.A int < t1.A int ∧ t0.C int >= t1.C int ∧ t0.G string == t1.G string }
+¬{ t0.A int <= t1.A int ∧ t0.A int <> t1.D int ∧ t0.B double <= t1.B double ∧ t0.C int >= t1.C int }
+¬{ t0.A int >= t1.C int ∧ t0.D int <= t1.D int ∧ t0.E double >= t1.E double ∧ t0.G string <> t1.G string }
+¬{ t0.A int < t1.D int ∧ t0.D int >= t1.D int }
+¬{ t0.A int <> t1.D int ∧ t0.B double <= t1.B double ∧ t0.C int >= t1.C int ∧ t0.F string == t1.F string }
+¬{ t0.A int <= t1.A int ∧ t0.C int >= t1.C int ∧ t0.E double >= t1.E double }
+¬{ t0.A int <= t1.C int ∧ t0.D int >= t1.D int ∧ t0.G string == t1.G string }
+¬{ t0.B double <= t1.B double ∧ t0.C int <= t1.C int ∧ t0.F string == t1.F string ∧ t0.G string <> t1.G string }
+¬{ t0.A int > t1.A int ∧ t0.A int >= t1.C int ∧ t0.D int <= t1.D int }
+¬{ t0.A int <> t1.A int ∧ t0.B double >= t1.B double ∧ t0.C int <> t1.D int ∧ t0.E double >= t1.E double ∧ t0.G string <> t1.G string }
+¬{ t0.A int <= t1.C int ∧ t0.B double >= t1.B double ∧ t0.C int >= t1.C int ∧ t0.F string == t1.F string }
+¬{ t0.A int == t1.D int ∧ t0.C int <= t1.C int }
+¬{ t0.A int <= t1.C int ∧ t0.A int >= t1.D int ∧ t0.C int <= t1.C int ∧ t0.D int < t1.D int }
+¬{ t0.A int <= t1.D int ∧ t0.C int <= t1.C int ∧ t0.D int >= t1.D int }
+¬{ t0.A int <= t1.C int ∧ t0.B double <= t1.B double ∧ t0.E double <= t1.E double ∧ t0.G string == t1.G string }
+¬{ t0.A int <= t1.A int ∧ t0.A int <= t1.C int ∧ t0.A int >= t1.D int ∧ t0.C int <= t1.C int }
+¬{ t0.A int >= t1.A int ∧ t0.A int <= t1.C int ∧ t0.A int >= t1.D int ∧ t0.B double >= t1.B double }
+¬{ t0.A int <= t1.C int ∧ t0.A int <> t1.D int ∧ t0.B double <= t1.B double ∧ t0.F string == t1.F string }
+¬{ t0.C int == t1.D int ∧ t0.E double >= t1.E double ∧ t0.G string == t1.G string }
+¬{ t0.A int <= t1.A int ∧ t0.A int < t1.C int ∧ t0.A int > t1.D int }
+¬{ t0.A int >= t1.A int ∧ t0.A int <= t1.C int ∧ t0.B double >= t1.B double ∧ t0.C int >= t1.C int }
+¬{ t0.A int >= t1.D int ∧ t0.C int <= t1.C int ∧ t0.E double <= t1.E double }
+¬{ t0.A int < t1.C int ∧ t0.C int >= t1.C int ∧ t0.D int <= t1.D int }
+¬{ t0.C int == t1.C int }
+¬{ t0.A int <= t1.C int ∧ t0.A int <> t1.D int ∧ t0.B double <= t1.B double ∧ t0.E double <= t1.E double }
+¬{ t0.A int <= t1.C int ∧ t0.B double <= t1.B double ∧ t0.C int >= t1.C int ∧ t0.F string <> t1.F string }
+¬{ t0.A int <= t1.A int ∧ t0.A int >= t1.C int ∧ t0.E double >= t1.E double ∧ t0.F string <> t1.F string }
+¬{ t0.A int <= t1.C int ∧ t0.B double <= t1.B double ∧ t0.E double >= t1.E double ∧ t0.F string == t1.F string }
+¬{ t0.A int <= t1.C int ∧ t0.A int >= t1.D int ∧ t0.B double >= t1.B double ∧ t0.F string == t1.F string }
+¬{ t0.A int == t1.D int ∧ t0.D int <= t1.D int }
+¬{ t0.A int < t1.A int ∧ t0.A int >= t1.D int ∧ t0.G string == t1.G string }
+¬{ t0.A int == t1.C int ∧ t0.B double <= t1.B double }
+¬{ t0.A int >= t1.C int ∧ t0.C int <= t1.C int ∧ t0.F string <> t1.F string }
+¬{ t0.A int <= t1.A int ∧ t0.D int >= t1.D int ∧ t0.E double >= t1.E double }
+¬{ t0.A int >= t1.C int ∧ t0.F string == t1.F string ∧ t0.G string <> t1.G string }
+¬{ t0.B double <= t1.B double ∧ t0.C int >= t1.C int ∧ t0.F string == t1.F string ∧ t0.G string == t1.G string }
+¬{ t0.A int <= t1.C int ∧ t0.D int >= t1.D int ∧ t0.E double <= t1.E double ∧ t0.F string <> t1.F string }
+¬{ t0.A int <> t1.A int ∧ t0.A int <= t1.D int ∧ t0.B double <= t1.B double ∧ t0.C int <> t1.D int ∧ t0.G string <> t1.G string }
+¬{ t0.A int <= t1.C int ∧ t0.A int <> t1.D int ∧ t0.E double <= t1.E double ∧ t0.F string == t1.F string }
+¬{ t0.B double <= t1.B double ∧ t0.E double >= t1.E double ∧ t0.F string == t1.F string ∧ t0.G string <> t1.G string }
+¬{ t0.A int >= t1.C int ∧ t0.B double <= t1.B double ∧ t0.D int >= t1.D int ∧ t0.F string == t1.F string }
+¬{ t0.A int == t1.A int ∧ t0.A int <> t1.D int ∧ t0.B double <= t1.B double ∧ t0.G string <> t1.G string }
+¬{ t0.A int <= t1.A int ∧ t0.B double <= t1.B double ∧ t0.C int <= t1.C int ∧ t0.C int <> t1.D int ∧ t0.G string <> t1.G string }
+¬{ t0.A int <= t1.A int ∧ t0.A int >= t1.D int ∧ t0.C int <= t1.C int ∧ t0.G string <> t1.G string }
+¬{ t0.A int <= t1.A int ∧ t0.A int <> t1.C int ∧ t0.C int >= t1.C int ∧ t0.D int <> t1.D int ∧ t0.F string <> t1.F string }
+¬{ t0.A int < t1.D int ∧ t0.C int >= t1.C int }
+¬{ t0.A int <= t1.A int ∧ t0.B double <= t1.B double ∧ t0.C int >= t1.C int ∧ t0.G string == t1.G string }
+¬{ t0.A int == t1.A int ∧ t0.A int > t1.D int ∧ t0.G string <> t1.G string }
+¬{ t0.A int < t1.A int ∧ t0.A int <= t1.C int ∧ t0.D int >= t1.D int }
+¬{ t0.A int <> t1.A int ∧ t0.B double >= t1.B double ∧ t0.C int > t1.D int ∧ t0.E double >= t1.E double }
+¬{ t0.A int >= t1.A int ∧ t0.A int <= t1.D int ∧ t0.G string == t1.G string }
+¬{ t0.A int <= t1.C int ∧ t0.B double <= t1.B double ∧ t0.E double <= t1.E double ∧ t0.F string <> t1.F string }
+¬{ t0.A int < t1.A int ∧ t0.B double <= t1.B double ∧ t0.C int >= t1.C int }
+¬{ t0.A int <= t1.C int ∧ t0.A int >= t1.D int ∧ t0.D int <= t1.D int ∧ t0.F string == t1.F string }
+¬{ t0.A int <= t1.A int ∧ t0.B double <= t1.B double ∧ t0.D int >= t1.D int ∧ t0.G string == t1.G string }
+¬{ t0.A int >= t1.A int ∧ t0.A int <= t1.C int ∧ t0.C int >= t1.C int ∧ t0.F string <> t1.F string }
+¬{ t0.B double <= t1.B double ∧ t0.D int <= t1.D int ∧ t0.E double <= t1.E double }
+¬{ t0.A int <> t1.A int ∧ t0.A int <= t1.D int ∧ t0.C int >= t1.C int }
+¬{ t0.A int <= t1.A int ∧ t0.A int < t1.C int ∧ t0.A int >= t1.D int ∧ t0.D int <= t1.D int }
+¬{ t0.A int <> t1.A int ∧ t0.A int >= t1.D int ∧ t0.C int <= t1.C int ∧ t0.G string == t1.G string }
+¬{ t0.A int > t1.A int ∧ t0.A int <= t1.C int ∧ t0.B double >= t1.B double }
+¬{ t0.A int < t1.C int ∧ t0.A int >= t1.D int ∧ t0.B double >= t1.B double }
+¬{ t0.C int <> t1.D int ∧ t0.D int <= t1.D int ∧ t0.E double <= t1.E double ∧ t0.G string == t1.G string }
+¬{ t0.A int >= t1.A int ∧ t0.A int <= t1.C int ∧ t0.B double >= t1.B double ∧ t0.F string <> t1.F string }
+¬{ t0.A int < t1.A int ∧ t0.A int >= t1.C int ∧ t0.B double <= t1.B double }
+¬{ t0.A int >= t1.D int ∧ t0.C int <= t1.C int ∧ t0.D int < t1.D int ∧ t0.G string <> t1.G string }
+¬{ t0.D int == t1.D int ∧ t0.F string == t1.F string }
+¬{ t0.A int <= t1.A int ∧ t0.A int >= t1.D int ∧ t0.E double >= t1.E double ∧ t0.F string <> t1.F string }
+¬{ t0.A int < t1.A int ∧ t0.A int >= t1.C int ∧ t0.E double >= t1.E double }
+¬{ t0.A int <= t1.C int ∧ t0.A int <> t1.D int ∧ t0.D int >= t1.D int ∧ t0.E double <= t1.E double }
+¬{ t0.A int <= t1.A int ∧ t0.A int <> t1.D int ∧ t0.B double <= t1.B double ∧ t0.D int >= t1.D int }
+¬{ t0.A int <> t1.C int ∧ t0.A int >= t1.D int ∧ t0.B double >= t1.B double ∧ t0.D int < t1.D int }
+¬{ t0.A int <= t1.A int ∧ t0.B double >= t1.B double ∧ t0.C int > t1.D int ∧ t0.F string <> t1.F string ∧ t0.G string == t1.G string }
+¬{ t0.A int <= t1.A int ∧ t0.A int >= t1.C int ∧ t0.B double <= t1.B double ∧ t0.G string <> t1.G string }
+¬{ t0.A int < t1.A int ∧ t0.C int <> t1.D int ∧ t0.E double >= t1.E double ∧ t0.G string <> t1.G string }
+¬{ t0.A int <= t1.C int ∧ t0.D int == t1.D int ∧ t0.E double <= t1.E double }
+¬{ t0.A int >= t1.C int ∧ t0.B double >= t1.B double ∧ t0.E double >= t1.E double }
+¬{ t0.A int < t1.D int ∧ t0.B double <= t1.B double ∧ t0.E double <= t1.E double }
+¬{ t0.C int <= t1.C int ∧ t0.C int <> t1.D int ∧ t0.E double <= t1.E double ∧ t0.G string == t1.G string }
+¬{ t0.A int < t1.A int ∧ t0.B double >= t1.B double ∧ t0.C int > t1.D int ∧ t0.G string == t1.G string }
+¬{ t0.A int <= t1.D int ∧ t0.B double <= t1.B double ∧ t0.E double <= t1.E double ∧ t0.G string == t1.G string }
+¬{ t0.A int >= t1.A int ∧ t0.A int >= t1.D int ∧ t0.B double >= t1.B double ∧ t0.D int <= t1.D int }
+¬{ t0.A int == t1.A int ∧ t0.F string <> t1.F string }
+¬{ t0.B double <= t1.B double ∧ t0.C int <= t1.D int ∧ t0.G string == t1.G string }
+¬{ t0.A int > t1.A int ∧ t0.A int <= t1.C int ∧ t0.E double <= t1.E double }
+¬{ t0.A int <> t1.C int ∧ t0.A int >= t1.D int ∧ t0.D int < t1.D int ∧ t0.F string <> t1.F string }
+¬{ t0.A int <> t1.A int ∧ t0.A int >= t1.C int ∧ t0.B double <= t1.B double ∧ t0.D int <= t1.D int }
+¬{ t0.A int < t1.A int ∧ t0.A int >= t1.D int ∧ t0.B double <= t1.B double }

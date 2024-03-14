@@ -8,7 +8,6 @@ import java.util.Set;
 import java.util.function.Consumer;
 
 import ch.javasoft.bitset.LongBitSet;
-import ch.javasoft.bitset.LongBitSet;
 
 public class NTreeSearch {
 

@@ -3,8 +3,6 @@ package de.metanome.algorithms.dcfinder.predicates;
 public enum Operator {
   EQUAL, UNEQUAL, GREATER, LESS, GREATER_EQUAL, LESS_EQUAL;
 
-  private static final double EPSILON = 0.00001d;
-
   private Operator inverse;
   private Operator symmetric;
   private Operator[] implications;
@@ -29,74 +27,6 @@ public enum Operator {
 
   public Operator[] getTransitives() {
     return transitives;
-  }
-
-  public boolean isTransitiveWith(Operator op) {
-    for (Operator i : transitives) {
-      if (i == op)
-        return true;
-    }
-    return false;
-  }
-
-  public <T> boolean eval(Comparable<T> value1, T value2) {
-    if (this == EQUAL) {
-      return value1.equals(value2);
-    } else if (this == UNEQUAL) {
-      return !value1.equals(value2);
-    } else {
-      int c = value1.compareTo(value2);
-      switch (this) {
-        case GREATER_EQUAL:
-          return c >= 0;
-        case LESS:
-          return c < 0;
-        case LESS_EQUAL:
-          return c <= 0;
-        case GREATER:
-          return c > 0;
-        default:
-          break;
-      }
-    }
-
-    return false;
-  }
-
-  public boolean eval(int value1, int value2) {
-    switch (this) {
-      case EQUAL:
-        return value1 == value2;
-      case GREATER:
-        return value1 > value2;
-      case GREATER_EQUAL:
-        return value1 >= value2;
-      case LESS:
-        return value1 < value2;
-      case LESS_EQUAL:
-        return value1 <= value2;
-      case UNEQUAL:
-        return value1 != value2;
-    }
-    return false;
-  }
-
-  public boolean eval(double value1, double value2) {
-    switch (this) {
-      case EQUAL:
-        return Math.abs(value1 - value2) < EPSILON;
-      case UNEQUAL:
-        return Math.abs(value1 - value2) >= EPSILON;
-      case GREATER:
-        return value1 > value2;
-      case GREATER_EQUAL:
-        return value1 >= value2;
-      case LESS:
-        return value1 < value2;
-      case LESS_EQUAL:
-        return value1 <= value2;
-    }
-    return false;
   }
 
   /**

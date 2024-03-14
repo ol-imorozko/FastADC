@@ -2,10 +2,7 @@ package de.metanome.algorithms.dcfinder.predicates.sets;
 
 import java.util.*;
 
-import ch.javasoft.bitset.BitSetFactory;
 import ch.javasoft.bitset.LongBitSet;
-import ch.javasoft.bitset.LongBitSet;
-import ch.javasoft.bitset.LongBitSet.LongBitSetFactory;
 import de.metanome.algorithms.dcfinder.helpers.IndexProvider;
 import de.metanome.algorithms.dcfinder.predicates.Predicate;
 
@@ -32,7 +29,6 @@ public class PredicateSet implements Iterable<Predicate> {
         this.bitset = pS.getBitset().clone();
     }
 
-
     private PredicateSet InvT1T2;
 
     public PredicateSet getInvT1T2() {
@@ -46,17 +42,8 @@ public class PredicateSet implements Iterable<Predicate> {
         return InvT1T2 = res;
     }
 
-
-    public void remove(Predicate predicate) {
-        this.bitset.clear(indexProvider.getIndex(predicate));
-    }
-
     public boolean containsPredicate(Predicate predicate) {
         return bitset.get(indexProvider.getIndex(predicate));
-    }
-
-    public boolean isSubsetOf(PredicateSet superset) {
-        return bitset.isSubSetOf(superset.getBitset());
     }
 
     public LongBitSet getBitset() {
@@ -67,15 +54,12 @@ public class PredicateSet implements Iterable<Predicate> {
         return bitset;
     }
 
-    public void addAll(PredicateSet PredicateBitSet) {
-        bitset.or(PredicateBitSet.getBitset());
-    }
-
     public int size() {
         return bitset.cardinality();
     }
 
     public boolean add(Predicate predicate) {
+        //System.out.println("Adding predicate to Predicate set");
         int index = indexProvider.getIndex(predicate);
         boolean newAdded = !bitset.get(index);
         bitset.set(index);
