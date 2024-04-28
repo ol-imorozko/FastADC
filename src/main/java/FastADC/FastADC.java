@@ -57,9 +57,15 @@ public class FastADC {
                     writer.write("\tKeys: " + arrayToString(pli.getKeys()) + "\n");
                     writer.write("\tClusters:\n");
                     
-                    for (Cluster cluster : pli.getClusters()) {
-                        writer.write("\t\t" + cluster + "\n");
+                    for (int key : pli.getKeys()) {
+                        Integer clusterId = pli.getClusterIdByKey(key);
+                        Cluster cluster = pli.getClusterByKey(key);
+                        writer.write(String.format("\t\tKey %d -> Cluster #%d: %s\n", key, clusterId, cluster.toString()));
                     }
+                    
+                    // for (Cluster cluster : pli.getClusters()) {
+                    //     writer.write("\t\t" + cluster + "\n");
+                    // }
                 }
                 writer.write("\n");
             }

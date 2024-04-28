@@ -36,15 +36,13 @@ public class IndexProvider<T> {
 
     public static <A extends Comparable<A>> int[] sort(IndexProvider<A> r) {
         Collections.sort(r.objects);
-        r.updateMap = new int[r.size()];
 
         for (int i = 0; i < r.objects.size(); i++) {
             A object = r.objects.get(i);
-            r.updateMap[r.indexes.get(object)] = i;
             r.indexes.put(object, i);
         }
 
-        return r.updateMap;
+        return null;
     }
 
     public int size() {

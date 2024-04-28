@@ -25,10 +25,6 @@ public class Pli {
         return keys;
     }
 
-    public List<Cluster> getClusters() {
-        return clusters;
-    }
-
     public Cluster getClusterByKey(Integer key) {
         Integer clusterId = keyToClusterIdMap.get(key);
         return clusterId != null ? clusters.get(clusterId) : null;

@@ -35,7 +35,8 @@ public class Main {
 
     public static void main(String[] args) {
         // String fp = "./dataset/tax.csv";
-        String fp = "./dataset/dc_test_dataset.csv";
+        //String fp = "./dataset/dc_test_dataset.csv";
+        String fp = "./dataset/tmp.csv";
         //String fp = "./dataset/dc_small.csv";
         // double threshold = 0.01d;
         double threshold = 0.01d;
