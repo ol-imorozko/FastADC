@@ -1,0 +1,17 @@
+¬{ t0.A int <> t1.A int ∧ t0. C string == t1. C string }
+¬{ t0.A int <= t1.A int ∧ t0.A int >= t1. B int ∧ t0. B int <= t1. B int }
+¬{ t0.A int == t1.A int ∧ t0. C string <> t1. C string }
+¬{ t0.A int <> t1. B int ∧ t0. B int >= t1. B int ∧ t0. C string <> t1. C string }
+¬{ t0. B int == t1. B int }
+¬{ t0.A int > t1. B int ∧ t0. B int <= t1. B int }
+¬{ t0.A int == t1.A int ∧ t0.A int == t1. B int }
+¬{ t0.A int <> t1.A int ∧ t0.A int <> t1. B int ∧ t0. B int >= t1. B int }
+¬{ t0.A int > t1.A int ∧ t0.A int <> t1. B int }
+¬{ t0.A int >= t1. B int ∧ t0. B int <= t1. B int ∧ t0. C string == t1. C string }
+¬{ t0.A int > t1. B int ∧ t0. C string <> t1. C string }
+¬{ t0.A int <> t1.A int ∧ t0.A int > t1. B int }
+¬{ t0.A int == t1.A int ∧ t0.A int <= t1. B int ∧ t0. B int >= t1. B int }
+¬{ t0.A int == t1. B int ∧ t0. C string == t1. C string }
+¬{ t0.A int <= t1. B int ∧ t0. B int >= t1. B int ∧ t0. C string == t1. C string }
+¬{ t0.A int >= t1.A int ∧ t0.A int <> t1. B int ∧ t0. C string <> t1. C string }
+¬{ t0.A int < t1. B int ∧ t0. B int >= t1. B int }

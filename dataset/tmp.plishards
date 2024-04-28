@@ -1,0 +1,18 @@
+PliShard #1 (Range: [0, 3))
+	PLI #1
+	Keys: [1, 0]
+	Clusters:
+		Key 1 -> Cluster #0: [1, 2]
+		Key 0 -> Cluster #1: [0]
+	PLI #2
+	Keys: [2, 1, 0]
+	Clusters:
+		Key 2 -> Cluster #0: [2]
+		Key 1 -> Cluster #1: [0]
+		Key 0 -> Cluster #2: [1]
+	PLI #3
+	Keys: [1, 0]
+	Clusters:
+		Key 1 -> Cluster #0: [1, 2]
+		Key 0 -> Cluster #1: [0]
+
