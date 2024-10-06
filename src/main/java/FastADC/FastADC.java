@@ -45,41 +45,41 @@ public class FastADC {
 
     public DenialConstraintSet buildApproxDCs(String _dataFp, int sizeLimit) {
         dataFp = _dataFp;
-        System.out.println("INPUT FILE: " + dataFp);
-        System.out.println("ERROR THRESHOLD: " + threshold);
+        // System.out.println("INPUT FILE: " + dataFp);
+        // System.out.println("ERROR THRESHOLD: " + threshold);
 
         // Pre-process: load input data, build predicate space and pli shards
-        long t00 = System.currentTimeMillis();
-        input = new Input(new RelationalInput(dataFp), sizeLimit);
+        long[] time_after_processing = {0};
+        input = new Input(new RelationalInput(dataFp), sizeLimit, time_after_processing);
         predicateBuilder.buildPredicateSpace(input);
         pliShardBuilder = new PliShardBuilder(shardLength, input.getParsedColumns());
         PliShard[] pliShards = pliShardBuilder.buildPliShards(input.getIntInput());
-        long t_pre = System.currentTimeMillis() - t00;
-        System.out.println(" [Predicate] Predicate space size: " + predicateBuilder.predicateCount());
-        System.out.println("[FastADC] Pre-process time: " + t_pre + "ms");
+        // long t_pre = System.currentTimeMillis() - t00;
+        // System.out.println(" [Predicate] Predicate space size: " + predicateBuilder.predicateCount());
+        // System.out.println("[FastADC] Pre-process time: " + t_pre + "ms");
 
         // build evidence set
-        long t10 = System.currentTimeMillis();
         evidenceSetBuilder = new EvidenceSetBuilder(predicateBuilder);
         EvidenceSet evidenceSet = evidenceSetBuilder.buildEvidenceSet(pliShards, linear);
-        long t_evi = System.currentTimeMillis() - t10;
+        long t_evi = System.currentTimeMillis() - time_after_processing[0];
+        System.out.println("[Java] Evidence time: " + t_evi + "ms");
         long eviCount = evidenceSet.getTotalCount();
-        System.out.println(" [Evidence] # of evidences: " + evidenceSet.size());
-        System.out.println(" [Evidence] Accumulated evidence count: " + evidenceSet.getTotalCount());
-        System.out.println("[FastADC] Evidence time: " + t_evi + "ms");
+        // System.out.println(" [Evidence] # of evidences: " + evidenceSet.size());
+        // System.out.println(" [Evidence] Accumulated evidence count: " + evidenceSet.getTotalCount());
+        // System.out.println("[FastADC] Evidence time: " + t_evi + "ms");
 
         // approx evidence inversion
-        SimpleDateFormat sdf = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");
-        System.out.println(" [AEI Start] " + sdf.format(System.currentTimeMillis()));
+        // SimpleDateFormat sdf = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");
+        // System.out.println(" [AEI Start] " + sdf.format(System.currentTimeMillis()));
         long t20 = System.currentTimeMillis();
         long aeiTarget = (long) Math.ceil((1 - threshold) * eviCount);
-        System.out.println(" [AEI] Violate at most " + (eviCount - aeiTarget) + " tuple pairs");
+        // System.out.println(" [AEI] Violate at most " + (eviCount - aeiTarget) + " tuple pairs");
         ApproxEvidenceInverter evidenceInverter = new ApproxEvidenceInverter(predicateBuilder);
         DenialConstraintSet dcs = evidenceInverter.buildDenialConstraints(evidenceSet, aeiTarget);
         long t_aei = System.currentTimeMillis() - t20;
-        System.out.println("[FastADC] AEI time: " + t_aei + "ms");
+        System.out.println("[Java] AEI time: " + t_aei + "ms");
 
-        System.out.println("[FastADC] Total computing time: " + (t_pre + t_evi + t_aei) + " ms\n");
+        System.out.println("[Java] Total computing time: " + (t_evi + t_aei) + " ms\n");
         return dcs;
     }
 

@@ -21,11 +21,7 @@ public class Input {
     private final IndexProvider<Double> providerD;
 
 
-    public Input(RelationalInput relationalInput) {
-        this(relationalInput, -1);
-    }
-
-    public Input(RelationalInput relationalInput, int rowLimit) {
+    public Input(RelationalInput relationalInput, int rowLimit, long[] time_after_processing) {
         name = relationalInput.relationName();
         providerS = new IndexProvider<>();
         providerL = new IndexProvider<>();
@@ -35,10 +31,12 @@ public class Input {
         colCount = columns.length;
         rowCount = colCount > 0 ? columns[0].getLineCount() : 0;
 
+        // here we start counting time
+        time_after_processing[0] = System.currentTimeMillis();
+
+        //This fills providers, so this is a part of an algo
         parsedColumns = buildParsedColumns(columns);
         intInput = buildIntInput(parsedColumns);
-        System.out.println(" [Input] # of Tuples: " + rowCount);
-        System.out.println(" [Input] # of Attributes: " + colCount);
     }
 
     private Column[] readRelationalInputToColumns(RelationalInput relationalInput, int rowLimit) {

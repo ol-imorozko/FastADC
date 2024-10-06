@@ -25,6 +25,7 @@ public class EvidenceSetBuilder {
     public EvidenceSet buildEvidenceSet(PliShard[] pliShards, boolean linear) {
         if (pliShards.length != 0) {
             HashLongLongMap clueSet = linear ? linearBuildClueSet(pliShards) : buildClueSet(pliShards);
+            // System.out.println(clueSet.size());
             fullEvidenceSet.build(clueSet);
         }
         return fullEvidenceSet;
@@ -32,7 +33,7 @@ public class EvidenceSetBuilder {
 
     private HashLongLongMap linearBuildClueSet(PliShard[] pliShards) {
         int taskCount = (pliShards.length * (pliShards.length + 1)) / 2;
-        System.out.println("  [CLUE] task count: " + taskCount);
+        // System.out.println("  [CLUE] task count: " + taskCount);
 
         HashLongLongMap clueSet = HashLongLongMaps.newMutableMap();
         LongLongConsumer add = (k, v) -> clueSet.addValue(k, v, 0L);

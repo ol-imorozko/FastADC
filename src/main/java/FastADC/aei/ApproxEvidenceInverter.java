@@ -42,20 +42,20 @@ public class ApproxEvidenceInverter {
         /* collect resulted DC */
         List<LongBitSet> rawDCs = new ArrayList<>();
         approxCovers.forEach(transDC -> rawDCs.add(organizer.retransform(transDC.bitSet)));
-        System.out.println("  [AEI] Min cover size: " + rawDCs.size());
+        // System.out.println("  [AEI] Min cover size: " + rawDCs.size());
 
         DenialConstraintSet constraints = new DenialConstraintSet();
         for (LongBitSet rawDC : rawDCs)
             constraints.add(new DenialConstraint(rawDC));
-        System.out.println("  [AEI] Total DC size: " + constraints.size());
+        // System.out.println("  [AEI] Total DC size: " + constraints.size());
 
         constraints.minimize();
-        System.out.println("  [AEI] Min DC size : " + constraints.size());
+        // System.out.println("  [AEI] Min DC size : " + constraints.size());
         return constraints;
     }
 
     void inverseEvidenceSet(long target) {
-        System.out.println("  [AEI] Inverting evidences...");
+        // System.out.println("  [AEI] Inverting evidences...");
 
         approxCovers = new LongBitSetTrie();
         LongBitSet fullMask = new LongBitSet(nPredicates);
