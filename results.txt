@@ -1,0 +1,45 @@
+Dataset: Airport
+Run: 1
+Implementation: Java
+[Java] Evidence time: 22715ms
+[Java] AEI time: 145ms
+[Java] Total computing time: 22860 ms
+
+Gathered 122 denial constraints
+EndRun
+Dataset: Atom
+Run: 1
+Implementation: Java
+[Java] Evidence time: 339131ms
+[Java] AEI time: 1364ms
+[Java] Total computing time: 340495 ms
+
+Gathered 3835 denial constraints
+EndRun
+Dataset: Food
+Run: 1
+Implementation: Java
+[Java] Evidence time: 989232ms
+[Java] AEI time: 365ms
+[Java] Total computing time: 989597 ms
+
+Gathered 169 denial constraints
+EndRun
+Dataset: SPStock
+Run: 1
+Implementation: Java
+[Java] Evidence time: 462455ms
+[Java] AEI time: 535ms
+[Java] Total computing time: 462990 ms
+
+Gathered 315 denial constraints
+EndRun
+Dataset: Neighbors
+Run: 1
+Implementation: Java
+[Java] Evidence time: 2693ms
+[Java] AEI time: 2414ms
+[Java] Total computing time: 5107 ms
+
+Gathered 2236 denial constraints
+EndRun

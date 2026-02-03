@@ -1,0 +1,105 @@
+import java.io.BufferedWriter;
+import java.io.FileWriter;
+import java.io.IOException;
+import java.util.TreeMap;
+
+    public EvidenceSet buildEvidenceSet(PliShard[] pliShards, boolean linear) {
+        if (pliShards.length != 0) {
+            try {
+                HashLongLongMap clueSet = linearBuildClueSet(pliShards);
+                System.out.println("Done building clue ses");
+                fullEvidenceSet.build(clueSet);
+            } catch (IOException e) {
+                e.printStackTrace(); // Handle the exception (e.g., log it)
+            }
+        }
+        return fullEvidenceSet;
+    }
+
+
+    private HashLongLongMap linearBuildClueSet(PliShard[] pliShards) throws IOException {
+        int taskCount = (pliShards.length * (pliShards.length + 1)) / 2;
+
+        // Open file for writing
+        try (BufferedWriter writer = new BufferedWriter(new FileWriter("clues.out"))) {
+            writer.write("  [CLUE] task count: " + taskCount + "\n");
+
+            HashLongLongMap clueSet = HashLongLongMaps.newMutableMap();
+
+            // Define add and print functions with explicit types
+            LongLongConsumer add = new LongLongConsumer() {
+                @Override
+                public void accept(long k, long v) {
+                    clueSet.addValue(k, v, 0L);
+                }
+            };
+
+            LongLongConsumer print = new LongLongConsumer() {
+                @Override
+                public void accept(long k, long v) {
+                    try {
+                        writer.write("  Clue: " + k + ", Count: " + v + "\n");
+                    } catch (IOException e) {
+                        e.printStackTrace();
+                    }
+                }
+            };
+
+            // Loop through pliShards
+            for (int i = 0; i < pliShards.length; i++) {
+                for (int j = i; j < pliShards.length; j++) {
+                    ClueSetBuilder builder = i == j ? new SingleClueSetBuilder(pliShards[i])
+                            : new CrossClueSetBuilder(pliShards[i], pliShards[j]);
+                    HashLongLongMap partialClueSet = builder.buildClueSet();
+
+                    // Sort partial clue set by key using TreeMap
+                    TreeMap<Long, Long> tmp_sorted_map = new TreeMap<>();
+                    partialClueSet.forEach(new LongLongConsumer() {
+                        @Override
+                        public void accept(long k, long v) {
+                            tmp_sorted_map.put(k, v);
+                        }
+                    });
+
+                    // Print sorted partial clues to the file
+                    writer.write("Partial clue set for [" + i + ", " + j + "]:\n");
+                    tmp_sorted_map.forEach((k, v) -> print.accept(k, v));
+
+                    // Add partial clue set entries to the final clue set
+                    partialClueSet.forEach(add);
+                }
+            }
+
+            // Print final clue set to the file
+            writer.write("Final clue set:\n");
+            TreeMap<Long, Long> sortedClueSet = new TreeMap<>();
+            clueSet.forEach(new LongLongConsumer() {
+                @Override
+                public void accept(long k, long v) {
+                    sortedClueSet.put(k, v);
+                }
+            });
+            sortedClueSet.forEach((k, v) -> print.accept(k, v));
+
+            return clueSet;
+        }
+    }
+
+    public static void main(String[] args) {
+        String fp = "./dataset/airport.csv";
+        //String fp = "./dataset/dc_test_dataset.csv";
+        // String fp = "./dataset/tmp.csv";
+        //String fp = "./dataset/dc_small.csv";
+        // double threshold = 0.01d;
+        double threshold = 0.01d;
+        int rowLimit = -1;              // limit the number of tuples in dataset, -1 means no limit
+        int shardLength = 350;
+        boolean linear = true;         // linear single-thread in EvidenceSetBuilder
+        boolean singleColumn = false;   // only single-attribute predicates
+
+        FastADC fastADC = new FastADC(singleColumn, threshold, shardLength, linear);
+        DenialConstraintSet dcs = fastADC.buildApproxDCs(fp, rowLimit);
+
+        printDenialConstraints(dcs, -1, fp);
+        System.out.println();
+    }
