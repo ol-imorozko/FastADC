@@ -44,10 +44,12 @@ public class Column {
     }
 
     public void addLine(String string) {
-        if (type == Type.LONG && !ParserHelper.isInteger(string))
-            type = Type.NUMERIC;
-        if (type == Type.NUMERIC && !ParserHelper.isDouble(string))
-            type = Type.STRING;
+        if (string != null && !string.isEmpty()) {
+            if (type == Type.LONG && !ParserHelper.isInteger(string))
+                type = Type.NUMERIC;
+            if (type == Type.NUMERIC && !ParserHelper.isDouble(string))
+                type = Type.STRING;
+        }
         valueSet.add(string);
         values.add(string);
     }
