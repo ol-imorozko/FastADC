@@ -48,6 +48,10 @@ public class Input {
         int nLine = 0;
         try {
             CsvReader csvReader = new CsvReader(relationalInput.filePath, ',', StandardCharsets.UTF_8);
+            csvReader.setTextQualifier('"');
+            csvReader.setUseTextQualifier(true);
+            csvReader.setTrimWhitespace(false);
+            csvReader.setSkipEmptyRecords(false);
             csvReader.readHeaders();    // skip the header
             while (csvReader.readRecord()) {
                 String[] line = csvReader.getValues();

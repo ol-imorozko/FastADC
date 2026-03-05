@@ -64,11 +64,14 @@ public class ParserHelper {
 	public static boolean isInteger(String s, int radix) {
 		if (s == null || s.isEmpty())
 			return false;
-		for (int i = 0; i < s.length(); i++) {
-			if (i == 0 && s.charAt(i) == '-') {
-				if (s.length() == 1)
-					return false;
-			}
+		int start = 0;
+		char c0 = s.charAt(0);
+		if (c0 == '-' || c0 == '+') {
+			if (s.length() == 1)
+				return false;
+			start = 1;
+		}
+		for (int i = start; i < s.length(); i++) {
 			if (Character.digit(s.charAt(i), radix) < 0)
 				return false;
 		}
