@@ -12,7 +12,7 @@ public class Main {
         double threshold = 0.01d;
         int rowLimit = -1; // limit the number of tuples in dataset, -1 means no limit
         int shardLength = 350;
-        boolean linear = true; // linear single-thread in EvidenceSetBuilder
+        boolean linear = false; // linear single-thread in EvidenceSetBuilder
         boolean singleColumn = false; // only single-attribute predicates
 
         FastADC fastADC = new FastADC(singleColumn, threshold, shardLength, linear);

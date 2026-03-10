@@ -50,7 +50,7 @@ public class EvidenceSetBuilder {
 
     private HashLongLongMap buildClueSet(PliShard[] pliShards) {
         int taskCount = (pliShards.length * (pliShards.length + 1)) / 2;
-        System.out.println("  [CLUE] task count: " + taskCount);
+        // System.out.println("  [CLUE] task count: " + taskCount);
 
         ClueSetTask rootTask = new ClueSetTask(null, pliShards, 0, taskCount);
         return rootTask.invoke();
